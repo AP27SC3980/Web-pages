@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="email"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button {
+            display: block;
+            margin-top: 25px;
+            padding: 10px 25px;
+            background-color: #0fbbff;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Survey Form</h1>
+    <form action="/submit-survey" method="post">
+        <!-- Text Input -->
+        <label for="name"><h3>Name:</h3></label>
+        <input type="text" id="name" name="name" required>
+
+        <!-- Email Input -->
+        <label for="email"><h3>Email:</h3></label>
+        <input type="email" id="email" name="email" required>
+
+        <h3>Gender:</h3>
+        <!-- Radio Buttons -->
+        <label for="male">Male</label><input type="radio" id="male" name="gender" value="male">
+        <label for="female">Female</label><input type="radio" id="female" name="gender" value="female">        
+        <label for="other">Other</label><input type="radio" id="other" name="gender" value="other">
+
+       <label><h3>Interests:</h3></label>
+        <!-- Checkboxes -->
+        <label for="sports">Sports</label><input type="checkbox" id="sports" name="interests" value="sports">
+        <label for="music">Music</label><input type="checkbox" id="music" name="interests" value="music">
+        <label for="travel">Travel</label><input type="checkbox" id="travel" name="interests" value="travel">
+        <label for="reading">Reading</label><input type="checkbox" id="reading" name="interests" value="reading">
+        <label for="acting">Acting</label><input type="checkbox" id="acting" name="interests" value="acting">
+        <label for="drawing">Drawing</label><input type="checkbox" id="drawing" name="interests" value="drawing">
+
+          
+         <!-- Dropdown -->
+        <label for="age"><h3>Age Group:</h3></label>
+        <select id="age" name="age">
+            <option value="under18">Under 18</option>
+            <option value="18-24">18-24</option>
+            <option value="25-34">25-34</option>
+            <option value="35-44">35-44</option>
+            <option value="45-54">45-54</option>
+            <option value="55-64">55-64</option>
+            <option value="65plus">65+</option>
+        </select>
+
+        <!-- Textarea -->
+        <label for="comments"><h3>Comments:</h3></label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
